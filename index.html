@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Convert</title>
+</head>
+<body>
+
+    <div class="calculator">
+        <nav>Unit Calculator</nav>
+        <div class="input-section">
+            <label for="num1">Grams:</label>
+            <input type="text" id="num1" oninput="convert()" class="input-field">
+        </div>
+
+        <div class="input-section">
+            <label for="unitSelect">Convert to:</label>
+            <select id="unitSelect" onchange="convert()" class="select-field">
+                <option value="kg">Kilograms</option>
+                <option value="mg">Milligrams</option>
+                <option value="oz">Ounces</option>
+                <option value="ct">Carats</option>
+            </select>
+        </div>
+
+        <div id="resultContainer" class="result-section">
+            <p>Answer:
+              <span id="kgResult"></span>
+              <span id="mgResult"></span>
+              <span id="ozResult"></span>
+              <span id="ctResult"></span></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
